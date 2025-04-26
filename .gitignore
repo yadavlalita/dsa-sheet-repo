@@ -1,0 +1,11 @@
+# Ignore node_modules for both frontend and backend
+/Frondend/node_modules
+/Backend/node_modules
+
+# Ignore environment files
+/Frondend/.env
+/Backend/.env
+
+# Mac / Windows extra
+.DS_Store
+Thumbs.db

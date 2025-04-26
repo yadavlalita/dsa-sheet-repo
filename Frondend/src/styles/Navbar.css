@@ -1,0 +1,65 @@
+/* src/styles/Navbar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9fafb;
+    padding: 20px 30px;
+    color: #1ba098;
+  }
+  
+  .navbar-brand {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .nav-link {
+    color: #1ba098;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+  }
+  
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #1ba098;
+    left: 0;
+    bottom: -4px;
+    transition: 0.3s ease;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  .logout-button {
+    background: transparent;
+    border: 1px solid #1ba098;
+    padding: 5px 10px;
+    color: #1ba098;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .logout-button:hover {
+    background: #1ba098;
+    color: white;
+  }
+  
+  .nav-link.active::after {
+    width: 100%;
+    background: #1ba098; /* Highlight active link underline */
+  }
+  
