@@ -10,7 +10,7 @@ function Progress() {
 
   const fetchProgress = async () => {
     const token = localStorage.getItem('token');
-    const res = await axios.get('http://localhost:5000/api/topics/progress', {
+    const res = await axios.get('https://satisfied-healing-production.up.railway.app/api/topics/progress', {
       headers: { Authorization: token }
     });
     console.log("res-",res);

@@ -14,7 +14,7 @@ function Topics() {
 
   const fetchTopics = async () => {
     const token = localStorage.getItem('token');
-    const res = await axios.get('http://localhost:5000/api/topics', {
+    const res = await axios.get('https://satisfied-healing-production.up.railway.app/api/topics', {
       headers: { Authorization: token }
     });
     setTopics(res.data.topics);
@@ -33,11 +33,11 @@ function Topics() {
 
     try {
       if (isChecked) {
-        await axios.post(`http://localhost:5000/api/topics/complete-subtopic/${topicId}/${subTopicIndex}`, {}, {
+        await axios.post(`https://satisfied-healing-production.up.railway.app/api/topics/complete-subtopic/${topicId}/${subTopicIndex}`, {}, {
           headers: { Authorization: token }
         });
       } else {
-        await axios.delete(`http://localhost:5000/api/topics/uncomplete-subtopic/${topicId}/${subTopicIndex}`, {
+        await axios.delete(`https://satisfied-healing-production.up.railway.app/api/topics/uncomplete-subtopic/${topicId}/${subTopicIndex}`, {
           headers: { Authorization: token }
         });
       }

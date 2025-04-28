@@ -12,7 +12,7 @@ function Profile() {
     const fetchUser = async () => {
       const token = localStorage.getItem('token');
       try {
-        const res = await axios.get('http://localhost:5000/api/auth/user', {
+        const res = await axios.get('https://satisfied-healing-production.up.railway.app/api/auth/user', {
           headers: { Authorization: token }
         });
         setEmail(res.data.email);
